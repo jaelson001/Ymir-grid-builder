@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ymir Grid Builder</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <center><h1 style="color: #f0f0f0;text-shadow: 2px 2px #777;">Ymir Grid Builder</h1></center>
+    <div class="wrapper">
+        <div id="controls">
+            <button class="btn btn-dark" id="add-div">Adicionar Div</button>
+            <button class="btn btn-danger" id="delete-div">Excluir Div</button> 
+            <button class="btn btn-primary" id="copy-res">Copiar grid</button>
+            <label>
+                Ajustar Linha:
+                <input class="input-field" type="number" id="adjust-row" min="1" value="1">
+            </label>
+            <label>
+                Ajustar Coluna:
+                <input class="input-field" type="number" id="adjust-column" min="1" value="1">
+            </label>
+            <label>
+                Ajustar Columnspan:
+                <input class="input-field" type="number" id="adjust-column-span" min="1" value="1">
+            </label>
+            <label>
+                Ajustar Rowspan:
+                <input class="input-field" type="number" id="adjust-row-span" min="1" value="1">
+            </label>
+        </div>
+        <div id="grid-container" class="selected">
+            <style>
+                body{
+                    font-family: sans-serif;
+                    background-color: #f0f0f0;
+                    background-size: cover;
+                    margin: 0;
+                    padding:10px;
+                }
+                #grid-container{
+                    background-color: #f0f0f0;
+                    border-radius: 10px;
+                    display: grid;
+                    grid-column-start: 2;
+                    grid-row: 1;
+                    grid-column-end: 15;
+                    gap: 10px;
+                    border: 2px solid #777;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    width: calc(100% - 10px);
+                    overflow: auto;
+                }
+                
+                .grid-item{
+                    border: 2px dashed #777;
+                    display: grid;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+                </style>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
